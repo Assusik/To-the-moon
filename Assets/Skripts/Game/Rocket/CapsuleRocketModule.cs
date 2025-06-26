@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
-    public class EngineRocketModule:MonoBehaviour,IRocketModule
+    public class CapsuleRocketModule:MonoBehaviour,IRocketModule
     {
 
         private float _fuel;
