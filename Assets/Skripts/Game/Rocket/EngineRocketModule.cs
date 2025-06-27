@@ -1,66 +1,54 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DefaultNamespace
+namespace Skripts.Game.Rocket
 {
-    public class EngineRocketModule:MonoBehaviour,IRocketModule
-    {
+    
+    public class EngineRocketModule: RocketModuleBase, IRocketModule
+    {   
+        private Rigidbody2D _rocketRigitRigidbody2D;
+        private RocketModuleParams _rocketModuleParams;
 
-        private float _fuel;
-        private float _thurst;
-        private Rigidbody2D _rocketRigidbody2D;
-        private RocketController _rocketController;
-        private bool _turnOn = true;
-        private float _fuelConsumption;
-        
+        public bool IsDetached { get; set; }
+        public event UnityAction OnDetach;
 
-        public event UnityAction OnMissFuel;
+        private float _currentFuel;
 
-        public void Initialize(RocketModuleParams rocketModuleParams ,Rigidbody2D rigidbody2D)
+        private Vector2 _force;
+        public void Initialize(Rigidbody2D Rocketrigidbody,RocketModuleParams RocketModuleParams)
         {
-            _fuel = rocketModuleParams.fuel;
-            _thurst = rocketModuleParams.thrust;
-            _rocketRigidbody2D = rigidbody2D;
-            OnMissFuel += Detach;
+            _rocketRigitRigidbody2D = Rocketrigidbody;
+            _rocketModuleParams = RocketModuleParams;
+            _force = _rocketModuleParams.Thurst*Vector2.up;
+            _currentFuel = _rocketModuleParams.Fuel;
         }
-
         public void Detach()
         {
+            if (IsDetached) return;
+            IsDetached = true;
+            
+            
             transform.SetParent(null);
-            TurnOff();
+            if (GetComponent<Rigidbody2D>() == null)
+                gameObject.AddComponent<Rigidbody2D>();
+
+            OnDetach?.Invoke();
         }
 
-        private void FixedUpdate()
+        public override void Move()
         {
-            if (_turnOn)
+            if (IsDetached) return;
+            
+            if (_currentFuel > 0)
             {
-                Vector2 force = Vector2.zero * _thurst;
-                _rocketRigidbody2D.AddForce(force);
-                if (_fuel >= 0)
-                {
-                    _fuel -= _fuelConsumption * Time.fixedDeltaTime;
-                }
-                else
-                {
-                    OnMissFuel?.Invoke();
-                }
+                _rocketRigitRigidbody2D.AddForce(_force);
+                _currentFuel -= Time.fixedDeltaTime * _rocketModuleParams.Thurst;
+            }
+            else
+            {
+                Detach();
             }
 
-
         }
-
-        public void TurnOn()
-        {
-            _turnOn = true;
-        }
-
-        public void TurnOff()
-        {
-            _turnOn = false;
-        }
-        
-
-        
     }
 }

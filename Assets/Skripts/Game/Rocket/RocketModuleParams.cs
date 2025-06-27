@@ -1,14 +1,12 @@
-using System;
-using UnityEngine;
-
-namespace DefaultNamespace
+namespace Skripts.Game.Rocket
 {
-    [Serializable]
     public struct RocketModuleParams
     {
-        public int RocketModuleID;
-        public GameObject RocketModule;
-        public float fuel;
-        public float thrust;
+        public float Fuel { get; set; }
+        public float Thurst { get; set; }
+        
+        
     }
+    
+    
 }

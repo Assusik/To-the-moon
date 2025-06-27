@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a36163b106141918ee250795c23b662, type: 3}
   m_Name: RocketModuleConfig
   m_EditorClassIdentifier: 
+  EngineRocketModules:
+  - RocketModuleID: 1
+    RocketModule: {fileID: 7262384350910204538, guid: 6be69129ea6582f4ea59f554460cf5a6, type: 3}
+    fuel: 10
+    thrust: 10
+  CapsuleocketModuleList:
+  - RocketModuleID: 1
+    RocketModule: {fileID: 8953017457464085045, guid: 08fa6f091f4d3bc4692d0a7dd11ab026, type: 3}
+    fuel: 10
+    thrust: 10
