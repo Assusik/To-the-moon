@@ -5,11 +5,13 @@ namespace Skripts.Game.Rocket
 {
     public abstract class RocketModuleBase : MonoBehaviour, IRocketModule
     {
-        public bool IsDetached { get; set; }
+        
+        protected bool IsDetached { get; set; }
+        public abstract ModuleType ModuleType { get; }
         public event UnityAction OnDetach;
         protected Rigidbody2D _rocketRigidbody2D;
         protected RocketModuleParams _rocketModuleParams;
-        public void Initialize(Rigidbody2D rocketRigidbody2D, RocketModuleParams RocketModuleParams)
+        public virtual void Initialize(Rigidbody2D rocketRigidbody2D, RocketModuleParams RocketModuleParams)
         {
             _rocketRigidbody2D = rocketRigidbody2D;
             _rocketModuleParams = RocketModuleParams;
@@ -17,7 +19,7 @@ namespace Skripts.Game.Rocket
 
         public abstract void Move();
 
-        public void Detach()
+        public virtual void Detach()
         {
             if (IsDetached) return;
 

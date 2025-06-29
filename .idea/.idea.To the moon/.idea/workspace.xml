@@ -5,39 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58de5cac-ec0d-4f5e-883e-ef9ddee1f4a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameRoot.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameRoot/GameEntryPoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameRoot/GameEntryPoint.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameRoot/UIRootView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameRoot/UIRootView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Utils.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Utils/Couroutines.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Utils/Couroutines.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.To the moon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.To the moon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Configs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/GameEntryPoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/GameEntryPoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketFlyController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketFlyController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/SceneManagment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/SceneManagment/EntryPoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/SceneManagment/EntryPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,24 +36,27 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2z10TEBVjVe22H6TR786s6Emofs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="G:\Unity\6000.1.0f1\Editor\Unity.exe" />
@@ -134,6 +118,7 @@
       <updated>1750883279821</updated>
       <workItem from="1750883281960" duration="10981000" />
       <workItem from="1750947630306" duration="1936000" />
+      <workItem from="1751205287242" duration="624000" />
     </task>
     <servers />
   </component>

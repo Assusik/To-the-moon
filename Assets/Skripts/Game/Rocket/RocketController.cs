@@ -10,22 +10,32 @@ namespace Skripts.Game.Rocket
 {
     public class RocketController : MonoBehaviour
     {
-        [SerializeField] EngineRocketModule  engineRocketModule;
+        
         [SerializeField] Rigidbody2D rocketRigidbody2D;
         //private RocketModuleParams _rocketModuleParams;
         private IRocketModule _curentRocketModule;
 
         private List<IRocketModule> _rocketModules = new();
+        [SerializeField] private List<ModuleConfig> currentModuleConfigs;
         
         private void Start()
         {
+            
             _rocketModules = GetComponentsInChildren<IRocketModule>().ToList();
             foreach (var module in _rocketModules)
             {
+                
+                
+                var config = currentModuleConfigs.FirstOrDefault(c => c.ModuleType == module.ModuleType);
+                if (config == null)
+                {
+                    Debug.LogError($"Config for module type {module.ModuleType} not found!");
+                    continue;
+                }
                 var moduleParams = new RocketModuleParams
                 {
-                    Fuel = 50,
-                    Thurst = 10
+                    Fuel = config.Fuel,
+                    Thurst = config.Thrust,
                 };
 
                 module.Initialize(rocketRigidbody2D, moduleParams);
