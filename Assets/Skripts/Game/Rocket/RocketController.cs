@@ -13,6 +13,8 @@ namespace Skripts.Game.Rocket
     {
         
         [SerializeField] Rigidbody2D rocketRigidbody2D;
+
+        [SerializeField] private float RotateSpeed;
         //private RocketModuleParams _rocketModuleParams;\
         
         
@@ -59,6 +61,10 @@ namespace Skripts.Game.Rocket
             
             EventSystem.RaiseSpeedChanged(rocketRigidbody2D.linearVelocity.magnitude);
             EventSystem.RaiseAltitudeChanged(transform.position.y);
+            
+                
+            float horizontal = Input.GetAxis("Horizontal"); // ← → или A D
+            rocketRigidbody2D.MoveRotation(rocketRigidbody2D.rotation + -horizontal * RotateSpeed * Time.fixedDeltaTime);
             
         }
 

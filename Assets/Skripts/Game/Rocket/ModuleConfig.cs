@@ -9,6 +9,7 @@ namespace Skripts.Game.Rocket
             public ModuleType ModuleType;
             public float Fuel;
             public float Thrust;
+   
             //public GameObject ModulePrefab;
         
     }

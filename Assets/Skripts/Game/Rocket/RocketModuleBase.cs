@@ -17,7 +17,10 @@ namespace Skripts.Game.Rocket
         {
             _rocketRigidbody2D = rocketRigidbody2D;
             _rocketModuleParams = RocketModuleParams;
+            
         }
+
+        
 
         public abstract void Move();
         public abstract float GetMaxFuel();
