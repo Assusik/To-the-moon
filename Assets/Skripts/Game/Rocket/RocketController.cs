@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Skripts.Game.Rocket
 {
@@ -12,13 +13,18 @@ namespace Skripts.Game.Rocket
     {
         
         [SerializeField] Rigidbody2D rocketRigidbody2D;
-        //private RocketModuleParams _rocketModuleParams;
+        //private RocketModuleParams _rocketModuleParams;\
+        
+        
+        
+       
+        
         private IRocketModule _curentRocketModule;
 
         private List<IRocketModule> _rocketModules = new();
         [SerializeField] private List<ModuleConfig> currentModuleConfigs;
         
-        private void Start()
+        public void Initialize()
         {
             
             _rocketModules = GetComponentsInChildren<IRocketModule>().ToList();
@@ -51,6 +57,9 @@ namespace Skripts.Game.Rocket
         {
             _curentRocketModule?.Move();
             
+            EventSystem.RaiseSpeedChanged(rocketRigidbody2D.linearVelocity.magnitude);
+            EventSystem.RaiseAltitudeChanged(transform.position.y);
+            
         }
 
         private void SetCurrentModule()
@@ -62,7 +71,10 @@ namespace Skripts.Game.Rocket
             }
 
             _curentRocketModule = _rocketModules[0];
+            
             _rocketModules.RemoveAt(0);
+            Debug.Log(_curentRocketModule.GetMaxFuel());
+            EventSystem.RaiseMaxFuelChanged(_curentRocketModule.GetMaxFuel());
             
         }
         

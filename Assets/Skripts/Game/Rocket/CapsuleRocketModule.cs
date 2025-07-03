@@ -17,7 +17,12 @@ namespace Skripts.Game.Rocket
             _force = _rocketModuleParams.Thurst*Vector2.up;
             _currentFuel = _rocketModuleParams.Fuel;
         }
-        
+
+        public override float GetMaxFuel()
+        {
+            return _rocketModuleParams.Fuel;
+        }
+
 
         public override void Move()
         {   

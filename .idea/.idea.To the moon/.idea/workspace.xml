@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58de5cac-ec0d-4f5e-883e-ef9ddee1f4a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleConfig.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/ModuleType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.To the moon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.To the moon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/RocketModuleConfig.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/CapsuleRocketModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/EngineRocketModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/IRocketModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Game/Rocket/RocketModuleParams.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Skripts/Game/GameRoot/GameEntryPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Skripts/Utils/Couroutines.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -118,13 +109,14 @@
       <updated>1750883279821</updated>
       <workItem from="1750883281960" duration="10981000" />
       <workItem from="1750947630306" duration="1936000" />
-      <workItem from="1751205287242" duration="624000" />
+      <workItem from="1751205287242" duration="4027000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

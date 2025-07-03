@@ -26,19 +26,25 @@ namespace Skripts.Game.Rocket
 
         public override void Move()
         {
-            Debug.Log(_currentFuel);
+            
             if (IsDetached) return;
             
             if (_currentFuel > 0)
             {
                 _rocketRigitRigidbody2D.AddForce(_force);
                 _currentFuel -= Time.fixedDeltaTime * _rocketModuleParams.Thurst;
+                EventSystem.RaiseFuelChanged(_currentFuel);
             }
             else
             {
                 Detach();
             }
 
+        }
+
+        public override float GetMaxFuel()
+        {
+            return _rocketModuleParams.Fuel;
         }
     }
 }

@@ -9,6 +9,8 @@ namespace Skripts.Game.Rocket
         protected bool IsDetached { get; set; }
         public abstract ModuleType ModuleType { get; }
         public event UnityAction OnDetach;
+        public event UnityAction<float> OnFuelChanged;
+        
         protected Rigidbody2D _rocketRigidbody2D;
         protected RocketModuleParams _rocketModuleParams;
         public virtual void Initialize(Rigidbody2D rocketRigidbody2D, RocketModuleParams RocketModuleParams)
@@ -18,6 +20,7 @@ namespace Skripts.Game.Rocket
         }
 
         public abstract void Move();
+        public abstract float GetMaxFuel();
 
         public virtual void Detach()
         {

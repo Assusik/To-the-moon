@@ -10,6 +10,7 @@ namespace Skripts.Game.Rocket
         ModuleType ModuleType { get; }
         void Initialize(Rigidbody2D sharedBody, RocketModuleParams parameters);
         void Move();
+        float GetMaxFuel();
         void Detach(); // можно убрать из интерфейса и сделать internal
     }
 }
