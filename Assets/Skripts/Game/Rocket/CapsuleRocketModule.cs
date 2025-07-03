@@ -32,6 +32,7 @@ namespace Skripts.Game.Rocket
             {
                 _rocketRigidbody2D.AddForce(_force);
                 _currentFuel -= Time.fixedDeltaTime * _rocketModuleParams.Thurst;
+                EventSystem.RaiseFuelChanged(_currentFuel);
             }
             else
             {
