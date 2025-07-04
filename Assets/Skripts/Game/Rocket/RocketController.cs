@@ -57,14 +57,27 @@ namespace Skripts.Game.Rocket
 
         private void FixedUpdate()
         {
+            if(!Input.GetKey(KeyCode.S))
+            {
             _curentRocketModule?.Move();
+            }
             
             EventSystem.RaiseSpeedChanged(rocketRigidbody2D.linearVelocity.magnitude);
             EventSystem.RaiseAltitudeChanged(transform.position.y);
             
-                
-            float horizontal = Input.GetAxis("Horizontal"); // ← → или A D
-            rocketRigidbody2D.MoveRotation(rocketRigidbody2D.rotation + -horizontal * RotateSpeed * Time.fixedDeltaTime);
+            
+            float horizontal = Input.GetAxisRaw("Horizontal"); // ← → или A D
+
+            if (horizontal == 0)
+            {
+                rocketRigidbody2D.freezeRotation = true;
+            }
+            else
+            {
+                rocketRigidbody2D.freezeRotation = false;
+                rocketRigidbody2D.AddTorque(-horizontal);    
+            }
+            //rocketRigidbody2D.MoveRotation(rocketRigidbody2D.rotation + -horizontal * RotateSpeed * Time.fixedDeltaTime);
             
         }
 
@@ -75,6 +88,8 @@ namespace Skripts.Game.Rocket
                 _curentRocketModule = null;
                 return;
             }
+
+         
 
             _curentRocketModule = _rocketModules[0];
             

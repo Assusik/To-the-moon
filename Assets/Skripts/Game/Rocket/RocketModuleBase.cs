@@ -37,5 +37,13 @@ namespace Skripts.Game.Rocket
 
             OnDetach?.Invoke();
         }
+
+        public virtual void LastModuleDetach()
+        {
+            if (IsDetached) return;
+            IsDetached = true;
+            
+            OnDetach?.Invoke();
+        }
     }
 }

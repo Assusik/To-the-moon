@@ -14,8 +14,7 @@ namespace Skripts.Game.Rocket
 
         private Vector2 _force;
 
-        [SerializeField] Transform _rocketModuleForceTransform;
-        private Vector2 _enginePosition;
+
         public override ModuleType ModuleType => ModuleType.Engine;
         
         public override void Initialize(Rigidbody2D Rocketrigidbody,RocketModuleParams RocketModuleParams)
@@ -24,7 +23,7 @@ namespace Skripts.Game.Rocket
             _rocketModuleParams = RocketModuleParams;
             _force = _rocketModuleParams.Thurst*Vector2.up;
             _currentFuel = _rocketModuleParams.Fuel;
-            _enginePosition = _rocketModuleForceTransform.localPosition;
+
 
 
         }
@@ -36,7 +35,7 @@ namespace Skripts.Game.Rocket
             
             if (_currentFuel > 0)
             {
-                _rocketRigitRigidbody2D.AddForceAtPosition(_force, (Vector2)_rocketModuleForceTransform.localPosition);
+                _rocketRigitRigidbody2D.AddRelativeForce(_force);
                 _currentFuel -= Time.fixedDeltaTime * _rocketModuleParams.Thurst;
                 EventSystem.RaiseFuelChanged(_currentFuel);
             }
